@@ -8,10 +8,10 @@ ProcessedData = Reduce_L1L2inac(ProcessedData);
 ProcessedData = Reduce_HFinac(ProcessedData);
 
 %Reduce L1-L2 data size to common seconds to HF
-ProcessedData = Reduce_Common(ProcessedData);
+%ProcessedData = Reduce_Common(ProcessedData);
 
 %Reduce L1-L2 data considering every 15th second
-ProcessedData = Reduce_L1215(ProcessedData);
+%ProcessedData = Reduce_L1215(ProcessedData);
 
 %Reduce HF data considering every 15th second
 ProcessedData = Reduce_HF15(ProcessedData);

@@ -29,6 +29,6 @@ if( isfield(ProcessedData,'TaggingInfo') )
         end
     end
 end
-X = [ProcessedData.L1_Real; ProcessedData.L2_Real];
+X = [ProcessedData.L1_Real, ProcessedData.L2_Real];
 fprintf(1, 'Done formatting L1-L2 data for KNN.\n');
 end

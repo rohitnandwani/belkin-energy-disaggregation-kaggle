@@ -67,9 +67,8 @@ if K == 1, % sort distances only if K>1
     [mini, IndexProto] = min(d, [], 2); % 2 == row
     Class = ProtoClass(IndexProto);
     if nargout == 2, % instance indices in similarity descending order
-        [sorted, ind] = sort(d');]
-        RankIndex = ProtoClass(ind); 
-        %,e.g., [2 1 2 3 1 5 4 1 2]'
+        [sorted, ind] = sort(d'); % PxN
+        RankIndex = ProtoClass(ind); %,e.g., [2 1 2 3 1 5 4 1 2]'
         % conv into, e.g., [2 1 3 5 4]'
         for n = 1:N
             [ClassLabel, ind] = unique(RankIndex(:,n),'first');

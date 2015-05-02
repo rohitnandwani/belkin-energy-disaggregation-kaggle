@@ -1,7 +1,7 @@
 %% Clear workspace
 clear; clc;
 %% Step 1: Location and Filter for Dataset
-DATA_DIR_PATH = 'D:\Datasets\Energy Disaggregation\H4';
+DATA_DIR_PATH = 'C:\H4';
 %Find all .mat files starting with Tagged_* or Testing_*
 
 DATA_FILE_FILTER = 'Tagged\w*.mat';  % Training Files
@@ -68,25 +68,25 @@ clear('ProcessedData2')
 
 
 %Matlab KNN
-
+%%{
 X = transpose(X);
 Y = transpose(Y);
 %X2 = transpose(X2);
 %Y2 = transpose(Y2);
-mdl = ClassificationKNN.fit(X, Y, 'NumNeighbors', 60)
-%rloss = resubLoss(mdl)
+mdl = ClassificationKNN.fit(X, Y, 'NumNeighbors', 50)
+rloss = resubLoss(mdl)
 %cvmdl = crossval(mdl);
 %kloss = kfoldLoss(cvmdl)
 %label = predict(mdl, X);
-
+%%}
 
 
 
 %Custom KNN
 %label = cvKnn(X, X, Y);
-fprintf(1, '!.\n');
+fprintf(1, 'Done!.\n');
 
-    
+
 
 %Custom KNN
 %{
@@ -123,6 +123,12 @@ correctRate = mean(correctRates);
 fprintf(1, '!.\n');
 
 %}
+            
+
+    
+
+
+
             
         
         
