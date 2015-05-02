@@ -8,4 +8,4 @@ This was one of my first data mining projects. The main challenges faced were th
 
 The KNN algorithm was used to train and predict the disaggregated consumption of households.
 
-LoadData.m should be used to run the project.
+The dataset for the project can be found on the kaggle website mentioned in the description. LoadData.m should be used to run the project.
